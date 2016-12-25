@@ -2,36 +2,37 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="gallery.css">
-	<title>Gallery</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="gallery.js"></script>
+	<title>Gallery</title>
 </head>
-<body onload="load()">
-	<div class="container">
-		<div class="nav">
-			<div class="navbar-brand">
-				<a href="https://ngbtl95.github.io/index.html">Крылосова Валерия</a>
-			</div>
-			<div class="navbar-container">
-				<ul class="navbar">
-					<li><a href="https://ngbtl95.github.io/index.html">Обо мне</a></li>
-					<li class="active"><a href="https://ngbtl95.github.io/gallery.html">Галерея</a></li>
-					<li><a href="https://ngbtl95.github.io/contacts.html">Контакты</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="gallery">
-			<a href="https://ngbtl95.github.io/gallery.html"><img src="./gallery_files/1.jpg" id="1" onclick="javascript: open_img(1)"></a>
-			<a href="https://ngbtl95.github.io/gallery.html"><img src="./gallery_files/2.jpg" id="2" onclick="javascript: open_img(2)"></a>
-			<a href="https://ngbtl95.github.io/gallery.html"><img src="./gallery_files/3.jpg" id="3" onclick="javascript: open_img(3)"></a>
-			<a href="https://ngbtl95.github.io/gallery.html"><img src="./gallery_files/4.jpg" id="4" onclick="javascript: open_img(4)"></a>
-			<a href="https://ngbtl95.github.io/gallery.html"><img src="./gallery_files/5.jpg" id="5" onclick="javascript: open_img(5)"></a>
-			<a href="https://ngbtl95.github.io/gallery.html"><img src="./gallery_files/6.jpg" id="6" onclick="javascript: open_img(6)"></a>
-			<a href="https://ngbtl95.github.io/gallery.html"><img src="./gallery_files/7.jpg" id="7" onclick="javascript: open_img(7)"></a>
-			<a href="https://ngbtl95.github.io/gallery.html"><img src="./gallery_files/8.jpg" id="8" onclick="javascript: open_img(8)"></a>
-			<a href="https://ngbtl95.github.io/gallery.html"><img src="./gallery_files/9.jpg" id="9" onclick="javascript: open_img(9)"></a>
-		</div>
-		<div class="empty"></div>
+<body>
+	<img class="arrow-left" src="imgs/left-on.png">
+	<img class="arrow-right" src="imgs/right-on.png">
+    <div class="container">
+	<div class="gallery">
+        <img id='first-img' class="empty-img" src="empty" alt="">
+        <img class="lil-img first-img" src="imgs/1.jpg" onclick="showFull(1)">
+        <img class="lil-img" src="imgs/2.jpg" onclick="showFull(2)">
+        <img class="lil-img" src="imgs/3.jpg" onclick="showFull(3)">
+        <img class="lil-img" src="imgs/4.jpg" onclick="showFull(4)">
+        <img class="lil-img" src="imgs/5.jpg" onclick="showFull(5)">
+        <img class="lil-img" src="imgs/6.jpg" onclick="showFull(6)">
+        <img class="lil-img" src="imgs/7.jpg" onclick="showFull(7)">
+        <img class="lil-img" src="imgs/8.jpg" onclick="showFull(8)">
+        <img class="lil-img" src="imgs/9.jpg" onclick="showFull(9)">
+        <img id='last-img' class="empty-img" src="empty" alt="">
 	</div>
-	<div class="footer"></div>
-
-</body></html>
+    </div>
+    <div class="fullsize">
+        <div class="dark-bg">
+            <img class="big-arrow-left" src="imgs/left-on.png">
+            <img class="big-arrow-right" src="imgs/right-on.png">
+            <img class="close" src="imgs/close.png" alt="close">
+            <img class='loading' src="imgs/loading.gif" alt="">
+        </div>
+        <img class="fullsized-img" src="empty" alt="">
+    </div>
+</body>
+</html>

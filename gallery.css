@@ -1,0 +1,122 @@
+html,
+head,
+body,
+div,
+img
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    height: 100%;
+}
+
+.container
+{
+    margin-top: 40vh;
+    height: 150px;
+    overflow: hidden;
+}
+
+.gallery
+{
+    width: 10000px;
+    font-size: 0;
+}
+
+.arrow-left
+{
+    width: 5%;
+    height: 150px;
+    float: left;
+}
+
+.arrow-right
+{
+    width: 5%;
+    height: 150px;
+    float: right;
+}
+
+.big-arrow-left,
+.big-arrow-right
+{
+    margin-top: 35vh;
+    width: 10%;
+    height: 250px;
+}
+
+.big-arrow-left
+{
+    float: left;
+}
+
+.big-arrow-right
+{
+    float: right;
+}
+
+.gallery img
+{
+    width: 200px;
+    height: 150px;
+}
+
+#first-img
+{
+    margin-left: -200px;
+}
+
+.empty-img
+{
+    visibility: hidden;
+}
+
+.fullsize
+{
+    visibility: hidden;
+    position: absolute;
+    width:100%;
+    top:0;
+    left:0;
+    text-align:center;
+    height: 100%;
+    overflow-y:hidden;
+}
+
+.dark-bg {
+    background:rgba(0,0,0,0.7);
+    position:absolute;
+    z-index:1;
+    height: 100%;
+    width:100%;
+    text-align: center;
+}
+
+.loading
+{
+    position: relative;
+    top: 50%;
+}
+
+.fullsized-img
+{
+    position: relative;
+    margin:0 auto;
+    z-index:2;
+    max-height:80%;
+    max-width:80%;
+    top:16%;
+}
+
+.close
+{
+    position: absolute;
+    right: 40px;
+    top: 30px;
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+}
