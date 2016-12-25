@@ -41,6 +41,7 @@ function fullsizeFunctions(num) {
             num--;
         else
             num = 9;
+        $('.fullsized-img').attr('src', 'empty');
         $('.fullsized-img').attr('src', 'bigimgs/' + num + '.jpg');
     });
 
@@ -49,6 +50,7 @@ function fullsizeFunctions(num) {
             num++;
         else
             num = 1;
+        $('.fullsized-img').attr('src', 'empty');
         $('.fullsized-img').attr('src', 'bigimgs/' + num + '.jpg');
     });
 }
