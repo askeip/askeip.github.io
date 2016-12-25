@@ -5,6 +5,7 @@ function changeImgMargin(value) {
 }
 
 function close_img(){
+    $('.fullsized-img').remove();
     $('.fullsize').css('visibility', 'hidden');
 }
 
@@ -28,10 +29,18 @@ $(document).ready(function () {
     $('#first-img').css('margin-left', -imgWidth + 'px');
 });
 
+function createImage(num) {
+    $('.fullsized-img').remove();
+    var img = document.createElement('img');
+    img.src = 'bigimgs/' + num + '.jpg';
+    img.className = "fullsized-img";
+    $('.fullsize').append(img);
+}
+
 function showFull(num) {
     $('.fullsize').css('visibility', 'visible');
-    $('.fullsized-img').attr('src', 'bigimgs/' + num + '.jpg')
 
+    createImage(num);
     fullsizeFunctions(num);
 }
 
@@ -41,8 +50,7 @@ function fullsizeFunctions(num) {
             num--;
         else
             num = 9;
-        $('.fullsized-img').attr('src', 'empty');
-        $('.fullsized-img').attr('src', 'bigimgs/' + num + '.jpg');
+        createImage(num);
     });
 
     $('.big-arrow-right').click(function() {
@@ -52,6 +60,7 @@ function fullsizeFunctions(num) {
             num = 1;
         $('.fullsized-img').attr('src', 'empty');
         $('.fullsized-img').attr('src', 'bigimgs/' + num + '.jpg');
+        createImage(num);
     });
 }
 
